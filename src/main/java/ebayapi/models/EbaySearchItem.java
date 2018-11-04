@@ -23,6 +23,10 @@ public class EbaySearchItem {
 
     protected boolean suggestPrice;
 
+    protected String link;
+    
+    protected String photo;
+    
     public String getId() {
         return id;
     }
@@ -98,4 +102,20 @@ public class EbaySearchItem {
     public void setCurrency(String currency) {
         this.currency = currency;
     }
+    
+    	public String getLink() {
+		return link;
+	}
+
+	public void setLink(String link) {
+		this.link = link;
+	}
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 }
