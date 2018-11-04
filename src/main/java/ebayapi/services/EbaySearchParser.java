@@ -70,6 +70,14 @@ public class EbaySearchParser {
             item.setSuggestPrice(true);
         }
 
+        Elements photoElement = e.select("div > div > a > img");
+        String photo = photoElement.attr("src");
+        item.setPhoto(photo);
+        
+        Elements linkElement = e.select("div > div > a");
+        String link = linkElement.attr("href");
+        item.setLink(link);
+
         Element lvsubtitle = e.getElementsByClass("lvsubtitle").last();
         String conditionText;
         if (lvsubtitle != null) {
